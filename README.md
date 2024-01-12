@@ -12,7 +12,7 @@ Christian Aeschlimann
 
 ![image](https://github.com/Entlino/Lern-Periode-3/assets/111046353/e1a07ad4-f74b-4d16-8abf-419c11d7e2bf)
 
-Gewisse Ideem für Spiele.
+Gewisse Ideen für Spiele.
 
    
 ## 12.1.2024
