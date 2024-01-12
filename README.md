@@ -9,6 +9,11 @@ Christian Aeschlimann
 1. Im Module 431 war ich besonders gut. Im Modul 319 war ich mit einer 3.5 ungenügend.
 2. Mein Verbesserungsvorschlag war das ich gerne mein eigenes "kleines" Projekt starten möchte und nicht ständig die Modularbeiten aufholen möchte. Dieses geplante Projekt sollte in der Zukunft stets verbessert/verändert werden, somit hätte ich in Zukunft ebenfalls eine Aufgabe an der ich stets arbeiten kann.
 3. Ich möchte gerade eine Applikation erstellen auf welcher ich einfache Spiele hinzufüge wie Tic Tac Toe, Number Guesser, Hangman usw. Ziel wäre wöchentlich ein neues Game hinzuzufügen. Das ganze möchte ich als WinForm-Application implementieren.
+
+![image](https://github.com/Entlino/Lern-Periode-3/assets/111046353/e1a07ad4-f74b-4d16-8abf-419c11d7e2bf)
+
+Gewisse Ideem für Spiele.
+
    
 ## 12.1.2024
 
