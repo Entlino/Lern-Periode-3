@@ -20,21 +20,101 @@ Heute habe ich mich damit beschäftigt was ich in diesen wenigen Wochen machen m
 
 ## 19.1.2024
 
-- [ ] Tetris "grid erstellen"
-- [ ] Tetris "Formen erstellen"
+- [X] Tetris "grid erstellen"
+- [X] Tetris "Formen erstellen"
 - [ ] Formen die "Icon's" zuordnen
-- [ ] Die Tetris Formen mit den Pfeiltasten steuerbar machen.
+- [X] Die Tetris Formen mit den Pfeiltasten steuerbar machen.
 
 | Testfall-Nummer | Ausgangslage (Given) | Eingabe (When) | Ausgabe (Then) | Erfüllt? |
 | --- | --- | --- | --- | --- |
-| 1   | Projekt erstellt | Programm gestartet | Tetris "grid" vorhanden. |     |
-| 2   | Grid erstellt | Programm gestartet | Es sind grobe formen vorhanden. |     |
-| 3   | Grobe Formen zugeordnet | Programm gestartet | Die Formen verfügen nun über Icon's/Bilder. |     |
-| 4   | Icon's/Bilder sind eingefügt | Programm gestartet | Die vorhanden Formen lassen sich per Pfeiltasten steuern. |     |
+| 1   | Projekt erstellt | Programm gestartet | Tetris "grid" vorhanden. |Erfüllt|
+| 2   | Grid erstellt | Programm gestartet | Es sind grobe formen vorhanden. |Erfüllt|
+| 3   | Grobe Formen zugeordnet | Programm gestartet | Die Formen verfügen nun über Icon's/Bilder. |Nicht erfüllt|
+| 4   | Icon's/Bilder sind eingefügt | Programm gestartet | Die vorhanden Formen lassen sich per Pfeiltasten steuern. |Erfüllt|
 
-✍️ Heute am 16.1 habe ich... (50-100 Wörter)
+Heute am 19.01.2024 habe ich damit begonnen das Tetris-Spiel begonnen. Ich habe als erstes damit angefangen das Spielfeld (Grid) zu erstellen. Dies war glückglicherweise noch keine grosse herausforderung, jedoch als es danach darum geht die Formen zu erstellen habe ich grössere Probleme gehabt. Irgendwie hab ich schlussendlich mithilfe des Internets und AI's einen Code erschaffen bzw. gefunden welcher hoffentlich funktionert. Da ich jedoch seitem schon zu langsam war habe ich mich dafür entschieden das ich das mit den Icons überspringe und direkt zu den Pfeiltasten gehe da dies meiner Meinung nach einen grösseren einfluss auf das spiel hat.
 
-☝️ Vergessen Sie nicht, bis zum 16.1 einen ersten Code auf github hochzuladen, und in der Spalte **Erfüllt?** einzutragen, ob Ihr Code die Test-Fälle erfüllt
+
+In diesem Code unten habe ich zuerst das Spielfeld erstellt und danach jeder Form ihre Farbe zugeordnet.
+```
+    public class Tetris : Form
+    {
+        // Spielfeld, mit grössen
+        private const int GridWidth = 10;
+        private const int GridHeight = 20;
+
+        // Einzelne Feldergrösse
+        private const int CellSize = 20;
+
+        // Farben
+        private static readonly Color[] Colors = new Color[]
+        {
+            Color.Cyan, // I
+            Color.Blue, // J
+            Color.Orange, // L
+            Color.Yellow, // O
+            Color.Lime, // S
+            Color.Purple, // T
+            Color.Red, // Z
+        };
+
+```
+Im nächsten Code-Beispiel habe ich die einzelnen Formen in ein zweidimensonales Feld eingefügt. Dies hat so funktioniert das ich bei der Form I beispielsweise ein 4x4 Feld mit Booleans Arrays erstellt habe. Dann konnte ich einfach einer Linie den Wert "true" geben und dem rest den "false" Wert. Somit erkennt das Programm wo sich die Form in welcher Rotations befindet. Das ganze habe ich mit alles 7 Formen gemacht. Da es jedoch repetetiv ist habe ich hier nur 1 Form als beispiel eingefügt. (Die "Abschlussklammer" am ende habe ich zu verständlichkeit eingefügt und ist im eigentlichen Programm nicht vorhanden, da schliesslich weitere Zeilen folgen.)
+
+```
+        // Booleans für einzelne Formen
+        private static readonly bool[][][] Shapes = new bool[][][]
+        {
+            new bool[][] // I
+            {
+                new bool[] { true, true, true, true },
+                new bool[] { false, false, false, false },
+                new bool[] { false, false, false, false },
+                new bool[] { false, false, false, false },
+            }
+        };
+
+```
+
+Um die Formen nun noch mit den Pfeiltasten steuern zu können und mit der Leertaste dirkte nach unter "fallen" lassen zu können habe ich nun ein "Switch-Case" erstellt. Dabei habe ich die einzelnen möglichen Tasteneingaben als einzelnen Case verwendet. So wird wenn man nun die Rechte oder Linke Pfeiltaste verwendet wird die Form eine Zelle nach Rechts oder nach links verschoben. Bei der Unteren Pfeiltaste wird die Form um eine Zelle nach unten verschoben und bei der Oberen Pfeiltaste wird die Form rotiert. Schliesslich kann man mit der Leertaste die Form noch auf den Boden "fallen" lassen.
+
+```
+     
+        private void Tetris_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Erstellen des Switch-Case
+            switch (e.KeyCode)
+            {
+                case Keys.Left: // Nach Links verschieben
+                    if (CanMove(shapeX - 1, shapeY, shapeRotation))
+                    {
+                        shapeX--;
+                    }
+                    break;
+                case Keys.Right: // Nach Rechts verschieben
+                    if (CanMove(shapeX + 1, shapeY, shapeRotation))
+                    {
+                        shapeX++;
+                    }
+                    break;
+                case Keys.Down: // Eine Zelle nach unten verschieben
+                    if (CanMove(shapeX, shapeY + 1, shapeRotation))
+                    {
+                        shapeY++;
+                    }
+                    break;
+                case Keys.Up: // Form rotieren
+                    if (CanMove(shapeX, shapeY, (shapeRotation + 1) % 4))
+                    {
+                        shapeRotation = (shapeRotation + 1) % 4;
+                    }
+                    break;
+                case Keys.Space: // Form sofort nach unten "fallen" lassen
+                    while (CanMove(shapeX, shapeY + 1, shapeRotation))
+                    {
+                        shapeY++;
+
+```
 
 ## 26.1.2024
 
