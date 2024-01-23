@@ -36,7 +36,7 @@ Heute am 19.01.2024 habe ich damit begonnen das Tetris-Spiel begonnen. Ich habe 
 
 
 In diesem Code unten habe ich zuerst das Spielfeld erstellt und danach jeder Form ihre Farbe zugeordnet.
-```
+``` C#
     public class Tetris : Form
     {
         // Spielfeld, mit grössen
@@ -61,7 +61,7 @@ In diesem Code unten habe ich zuerst das Spielfeld erstellt und danach jeder For
 ```
 Im nächsten Code-Beispiel habe ich die einzelnen Formen in ein zweidimensonales Feld eingefügt. Dies hat so funktioniert das ich bei der Form I beispielsweise ein 4x4 Feld mit Booleans Arrays erstellt habe. Dann konnte ich einfach einer Linie den Wert "true" geben und dem rest den "false" Wert. Somit erkennt das Programm wo sich die Form in welcher Rotations befindet. Das ganze habe ich mit alles 7 Formen gemacht. Da es jedoch repetetiv ist habe ich hier nur 1 Form als beispiel eingefügt. (Die "Abschlussklammer" am ende habe ich zu verständlichkeit eingefügt und ist im eigentlichen Programm nicht vorhanden, da schliesslich weitere Zeilen folgen.)
 
-```
+``` C#
         // Booleans für einzelne Formen
         private static readonly bool[][][] Shapes = new bool[][][]
         {
@@ -78,7 +78,7 @@ Im nächsten Code-Beispiel habe ich die einzelnen Formen in ein zweidimensonales
 
 Um die Formen nun noch mit den Pfeiltasten steuern zu können und mit der Leertaste dirkte nach unter "fallen" lassen zu können habe ich nun ein "Switch-Case" erstellt. Dabei habe ich die einzelnen möglichen Tasteneingaben als einzelnen Case verwendet. So wird wenn man nun die Rechte oder Linke Pfeiltaste verwendet wird die Form eine Zelle nach Rechts oder nach links verschoben. Bei der Unteren Pfeiltaste wird die Form um eine Zelle nach unten verschoben und bei der Oberen Pfeiltaste wird die Form rotiert. Schliesslich kann man mit der Leertaste die Form noch auf den Boden "fallen" lassen.
 
-```
+``` C#
      
         private void Tetris_KeyDown(object sender, KeyEventArgs e)
         {
@@ -113,6 +113,7 @@ Um die Formen nun noch mit den Pfeiltasten steuern zu können und mit der Leerta
                     while (CanMove(shapeX, shapeY + 1, shapeRotation))
                     {
                         shapeY++;
+                    }
 
 ```
 
