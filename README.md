@@ -114,6 +114,9 @@ Um die Formen nun noch mit den Pfeiltasten steuern zu können und mit der Leerta
                     {
                         shapeY++;
                     }
+                    break;
+            }
+        }
 
 ```
 
