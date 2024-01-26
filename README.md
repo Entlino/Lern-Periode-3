@@ -133,14 +133,18 @@ Um die Formen nun noch mit den Pfeiltasten steuern zu können und mit der Leerta
 
 | Testfall-Nummer | Ausgangslage (Given) | Eingabe (When) | Ausgabe (Then) | Erfüllt? |
 | --- | --- | --- | --- | --- |
-| 5   | Formen sind steuerbar | Spiel wird gestartet | Die Formen generieren und fallen langsam nach unten |     |
-| 6   | Die Formen fallen nach unten. | Spiel wird gestartet, Form kommt unten an | Sie stapelt sich und fällt auf andere Formen drauf und nicht rein. |     |
-| 7   | Formen stapeln sich | eine Reihe wird gefüllt | Reihe wird gelöscht, Counter + 1 |     |
-| 8   | Formen sind stabelbar und steuerbar. | Reihe ist voll und wird gelöscht. | Falls es obere Reihen gibt werden diese nach unten verschoben. |     |
+| 5   | Formen sind steuerbar | Spiel wird gestartet | Die Formen generieren und fallen langsam nach unten |Nein|
+| 6   | Die Formen fallen nach unten. | Spiel wird gestartet, Form kommt unten an | Sie stapelt sich und fällt auf andere Formen drauf und nicht rein. |Nein|
+| 7   | Formen stapeln sich | eine Reihe wird gefüllt | Reihe wird gelöscht, Counter + 1 |Nein|
+| 8   | Formen sind stabelbar und steuerbar. | Reihe ist voll und wird gelöscht. | Falls es obere Reihen gibt werden diese nach unten verschoben. |Nein|
 
-✍️ Heute am 23.1 habe ich... (50-100 Wörter)
+Am heutigen Tag konnte ich leider nicht meine geplanten Ziele umsetzen. Dafür gibt es mehrere Gründe. Der absolut grösste Punkt war definitiv das Fehlerbeheben. Da ich leider im Programm, welches ich letzte Woche erschaffen hatte, noch einige Fehler hatte, habe ich die meiste Zeit des Nachmittags damit verbracht, möglichst alle Fehler zu beheben und neuen Code zu implementieren, welcher die Fehler beheben könnte. Als der Nachmittag langsam endete und ich mit Herrn Colic's Hilfe nun endlich ein Programm hatte, welches sich problemlos starten liess, war die Zeit schon zu knapp, um die restlich geplanten Punkte umzusetzen. Dann habe ich mich dazu entschieden, dass ich mich lieber damit beschäftige bzw. mich darüber informiere, wie ich das Tetris am besten visuell darstellen kann. Infolgedessen bin ich dann auf die sogenannten "Bitmaps" gestossen. Diese dienen dazu, eine digitale visuelle Darstellung eines Bildes zu erstellen. Wenn die Informationen, die ich gefunden habe, richtig waren, sollte es mir so möglich sein, das Spiel als "Bild" darzustellen, jedes Mal, wenn nun etwas verändert wurde, wechselt das "Bild".   (171 Wörter)
 
-☝️ Vergessen Sie nicht, bis zum 23.1 Ihren fixfertigen Code auf github hochzuladen, und in der Spalte **Erfüllt?** einzutragen, ob Ihr Code die Test-Fälle erfüllt
+Um einige der Fehler zu behebem musste ich die "CanMove-Funktion" definieren. Dies habe ich mit folgendem bool gemacht. Der Bool ist jedoch noch nicht mit bedingungen gefüllt und gibt deshalb immer den wert "True" aus. In diesem Bool müsste man nun noch eine IF-Schleife erstellen in welcher jede einzelne "Zelle" des Spielfeldes abgefragt wird ob diese bereits gefüllt ist oder nicht. Falls nicht steht der verschiebung der Form nichts im wege.
+
+``` C#
+        bool CanMove(int shapeX, int shapeY, int shapeRotation) => true;
+```
 
 ## 16.2.2024
 
