@@ -148,10 +148,12 @@ Um einige der Fehler zu behebem musste ich die "CanMove-Funktion" definieren. Di
 
 ## 16.2.2024
 
-✍️ Heute am 23.1 habe ich... (50-100 Wörter)
+Heute habe ich zuerst damit angefangen, meinen Code, welchen ich hier erklärt und visualisiert habe, noch mal durchzuschauen und allfällige Korrekturen vorgenommen. Schlussendlich sollte mein Code nun vollständig herausgeputzt sein. Danach habe ich mich meiner GitHub-Startseite zugewandt und diese nebst dem, dass ich diese aufgeräumt habe, noch visuell ansprechender gestaltet. (51)
 
 ## Reflexion
 
-Formen Sie Ihre Zusammenfassungen in Hinblick auf Ihren VBV zu einem zusammenhängenden Text von 100 bis 200 Wörtern (wieder mit Angabe in Klammern).
+In der Lern-Periode 3 muss ich ehrlich gestehen, ich habe trotz der kurzen Dauer am meisten Spass gehabt. Dies liegt zum einen daran, dass ich in dieser Lern-Periode grossen Spass am GitHub hatte und mir somit immer schon mit Vorfreude auf den Abschluss der einzelnen Tage gewartet habe, um endlich das GitHub machen zu können. Andererseits machte mir das kleine Projekt sehr viel Spass, was aber unter anderem auch dem Erklären des Codes im GitHubs zuzuführen ist. 
 
-Verfassen Sie zusätzlich einen kurzen Abschnitt, in welchem Sie über die Länge der Projekte reflektieren: Fanden Sie die 10-wöchtige LP2 oder die 4-wöchige LP3 angenehmer? Was bedeutet das für Ihre Planung der zukünftigen LP?
+(VBV): In der nächsten Lern-Periode möchte ich wie in dieser Lern-Periode den ganzen Code möglichst verständlich im GitHub darstellen und erklären.
+
+(102)
